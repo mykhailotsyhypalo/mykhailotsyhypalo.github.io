@@ -172,45 +172,72 @@ section > p {
 
 .dropdown {
     position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
 }
 
+.dropdown-button {
+    cursor: pointer;
+}
+
+/* Hidden normally */
 .dropdown-menu {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
 
     position: absolute;
-    top: 100%;
+    top: 70px;
     right: 0;
 
-    min-width: 230px;
+    display: flex;
+    flex-direction: column;
 
-    background: #0c0d0f;
+    min-width: 240px;
+
+    padding: 8px;
+
+    background: #151619;
     border: 1px solid #333;
+    border-radius: 8px;
 
-    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    transform: translateY(-8px);
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease,
+        visibility 0.15s;
 
     z-index: 2000;
 }
 
+/* Each item */
 .dropdown-menu a {
     display: block;
 
-    padding: 12px 20px;
+    padding: 12px 14px;
 
     white-space: nowrap;
+
+    border-radius: 5px;
+
+    color: #aaa;
 }
 
+/* Highlight individual item */
 .dropdown-menu a:hover {
-    background: #1a1b1e;
+    background: #25262a;
     color: white;
 }
 
-/* Show menu when mouse is over "More" */
-
+/* OPEN DROPDOWN */
 .dropdown:hover .dropdown-menu {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+
+    transform: translateY(0);
 }
-
-
 /* ==================== CV ENTRIES ==================== */
 
 .cv-entry {
