@@ -42,7 +42,8 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: 25px;
+    align-items: center;
 }
 
 nav a {
@@ -166,4 +167,117 @@ section > p {
     max-width: 650px;
 
     line-height: 1.6;
+}
+/* ==================== DROPDOWN MENU ==================== */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    min-width: 230px;
+
+    background: #0c0d0f;
+    border: 1px solid #333;
+
+    padding: 10px 0;
+
+    z-index: 2000;
+}
+
+.dropdown-menu a {
+    display: block;
+
+    padding: 12px 20px;
+
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background: #1a1b1e;
+    color: white;
+}
+
+/* Show menu when mouse is over "More" */
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* ==================== CV ENTRIES ==================== */
+
+.cv-entry {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    padding: 40px 0;
+
+    border-bottom: 1px solid #333;
+}
+
+.cv-date {
+    color: #777;
+
+    font-size: 15px;
+}
+
+.cv-content h3 {
+    margin: 0 0 8px 0;
+
+    font-size: 27px;
+}
+
+.cv-content p {
+    color: #999;
+
+    max-width: 700px;
+
+    line-height: 1.6;
+}
+
+.cv-subtitle {
+    color: #ddd !important;
+
+    font-weight: bold;
+}
+
+
+/* ==================== SKILLS ==================== */
+
+.skill-category {
+    padding: 25px 0;
+
+    border-bottom: 1px solid #333;
+}
+
+.skill-category h3 {
+    margin: 0 0 12px 0;
+
+    font-size: 24px;
+}
+
+.skill-category p {
+    color: #999;
+
+    line-height: 1.7;
+}
+
+
+/* ==================== CONTACT LINKS ==================== */
+
+#contact a {
+    color: #aaa;
+
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: white;
 }
