@@ -308,3 +308,89 @@ section > p {
 #contact a:hover {
     color: white;
 }
+/* ==================== MOBILE NAVIGATION ==================== */
+
+/* Hide mobile menu on normal screens */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* When screen becomes narrow */
+
+@media (max-width: 900px) {
+
+    /* Hide desktop navigation */
+
+    .nav-links {
+        display: none;
+    }
+
+
+    /* Show hamburger */
+
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+        height: 80px;
+    }
+
+    .mobile-menu-button {
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+
+    /* Mobile dropdown */
+
+    .mobile-dropdown {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+        right: 0;
+
+        min-width: 240px;
+
+        padding: 8px;
+
+        background: #151619;
+
+        border: 1px solid #333;
+        border-radius: 8px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+
+    /* Links inside menu */
+
+    .mobile-dropdown a {
+        display: block;
+
+        padding: 12px 14px;
+
+        color: #aaa;
+        text-decoration: none;
+
+        white-space: nowrap;
+
+        border-radius: 5px;
+    }
+
+    .mobile-dropdown a:hover {
+        background: #25262a;
+        color: white;
+    }
+
+
+    /* Open menu */
+
+    .mobile-menu:hover .mobile-dropdown {
+        display: block;
+    }
+}
