@@ -394,3 +394,32 @@ section > p {
         display: block;
     }
 }
+/* ===== ABOUT PROFILE PHOTO ===== */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+/* ===== ABOUT MOBILE LAYOUT ===== */
+
+@media (max-width: 700px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-photo {
+        max-width: 250px;
+    }
+}
